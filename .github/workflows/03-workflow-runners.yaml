@@ -7,16 +7,23 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Show OS
-              run: 'This job is running on an Ubuntu runner.'
+              run: |
+                echo "This job is running on an Ubuntu runner.""
+                echo "Runner OS: $RUNNER_OS"
     window-echo:
         runs-on: windows-latest
         steps:
             - name: Show OS
-              run: 'This job is running on a windows runner.'
+              shell: bash
+              run: |
+                echo "This job is running on an Ubuntu runner.""
+                echo "Runner OS: $RUNNER_OS"
     mac-echo:
         runs-on: macos-latest
         steps:
             - name: Show OS
-              run: 'This job is running on a mac runner'
+              run: |
+                echo "This job is running on an Ubuntu runner.""
+                echo "Runner OS: $RUNNER_OS"
     
  
